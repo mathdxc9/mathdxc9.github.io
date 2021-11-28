@@ -1,0 +1,26 @@
+<html>
+<script>
+window.onload=function(){
+  a = (document.location).toString();
+  alert(a);
+  b = [];
+  b = a.split();
+  x = parseInt(b[1]);
+  y = parseInt(b[2]);
+  w = parseInt(b[3]);
+  h = parseInt(b[4]);
+
+  document.getElementById('cancan').style.position="absolute";
+  document.getElementById('cancan').style.width=w+"px";
+  document.getElementById('cancan').style.height=h+"px";
+  document.getElementById('cancan').style.left=x+"px";
+  document.getElementById('cancan').style.top=y+"px";
+  ctx = document.getElementById('cancan').getContext("2d");
+  ctx.fillStyle="red";
+  ctx.fillRect(0,0,100,100);
+}
+</script>
+<body>
+<canvas id="cancan" style="position: absolute; border: red 1px solid"></canvas>
+</body>
+</html>
