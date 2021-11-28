@@ -1,0 +1,48 @@
+<html>
+<script>
+window.onload=function(){
+  a = (document.location).toString();
+  b = [];
+  b = a.split(",");
+  x = parseInt(b[1]);
+  y = parseInt(b[2]);
+  w = parseInt(b[3]);
+  h = parseInt(b[4]);
+  document.getElementById('cancan').style.position="absolute";
+  document.getElementById('cancan').style.width=w+"px";
+  document.getElementById('cancan').style.height=h+"px";
+  document.getElementById('cancan').style.left=x+"px";
+  document.getElementById('cancan').style.top=y+"px";
+  ctx = document.getElementById('cancan').getContext("2d");
+  ctx.stroke();
+  ctx.fillStyle="black";
+  ctx.fillRect(0,0,w,h);
+  ctx.stroke();
+  ctx.fillStyle="red";
+  ctx.fillRect(10,10,w,h);
+  ctx.stroke();
+  ctx.fillStyle="black";
+  ctx.fillRect(20,20,w,h);
+  ctx.stroke();
+  ctx.fillStyle="red";
+  ctx.fillRect(30,30,w,h);
+  ctx.stroke();
+  ctx.fillStyle="black";
+  ctx.fillRect(40,40,w,h);
+  ctx.stroke();
+  ctx.fillStyle="red";
+  ctx.fillRect(50,50,w,h);
+  ctx.stroke();
+  ctx.fillStyle="black";
+  ctx.fillRect(60,60,w,h);
+  ctx.stroke();
+  ctx.fillStyle="red";
+  ctx.fillRect(70,70,w,h);
+  ctx.stroke();
+
+}
+</script>
+<body>
+<canvas id="cancan" style="border: red 1px solid"></canvas>
+</body>
+</html>
